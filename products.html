@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rantai Ceria - Products and Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff0f5; /* ← index.html と同じに */
+      color: #333;
+      padding-bottom: 60px;
+      font-size: 16px;
+    }
+
+    header, footer {
+      background-color: rgba(230, 168, 215, 0.9);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      background-color: #c06c84;
+      padding: 8px 14px;
+      border-radius: 20px;
+      margin: 0 5px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      background-color: #b04e7d;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 48px; /* ← 統一 */
+    }
+
+    header p {
+      font-size: 20px;
+      margin: 5px 0;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #e6a8d7;
+      padding-bottom: 5px;
+      font-size: 24px;
+      color: #d65db1;
+      margin-bottom: 16px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .product {
+      width: 200px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      margin: 0;
+      font-weight: bold;
+      color: #c06c84;
+      font-size: 16px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      font-size: 14px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="about.html">👩‍💼 About Us</a>
+      <a href="contact.html">📍 Contact</a>
+    </nav>
+    <h1>Rantai Ceria</h1>
+    <p>We are handling cute products!</p>
+  </header>
+
+  <main>
+    <section id="products">
+      <h2>Our Products</h2>
+      <div class="products">
+        <div class="product">
+          <img src="product1.jpg" alt="Product 1">
+          <p>Meme Cat 1 - Rp. 5,000</p>
+        </div>
+        <div class="product">
+          <img src="product2.jpg" alt="Product 2">
+          <p>Meme Cat 2 - Rp. 5,000</p>
+        </div>
+        <div class="product">
+          <img src="product3.jpg" alt="Product 3">
+          <p>Meme Cat 3 - Rp. 5,000</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="gallery1.jpg" alt="Gallery Photo 1">
+        <img src="gallery2.jpg" alt="Gallery Photo 2">
+        <img src="gallery3.jpg" alt="Gallery Photo 3">
+        <img src="gallery4.jpg" alt="Gallery Photo 4">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Rantai Ceria. All rights reserved.
+  </footer>
+
+</body>
+</html>
