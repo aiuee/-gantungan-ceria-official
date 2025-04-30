@@ -5,26 +5,37 @@
   <title>Gantungan Ceria - Products and Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: 'Quicksand', sans-serif;
-      background-color: #fff0f5; /* ← index.html と同じに */
+      background-color: #e6f0ff;
       color: #333;
-      padding-bottom: 60px;
-      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-size: 18px;
     }
 
     header, footer {
-      background-color: rgba(230, 168, 215, 0.9);
+      background-color: #3399cc;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
 
     nav a {
       text-decoration: none;
       color: white;
-      background-color: #c06c84;
+      background-color: #0077b6;
       padding: 8px 14px;
       border-radius: 20px;
       margin: 0 5px;
@@ -34,79 +45,116 @@
     }
 
     nav a:hover {
-      background-color: #b04e7d;
+      background-color: #005f87;
     }
 
     h1 {
       margin: 10px 0;
-      font-size: 48px; /* ← 統一 */
-    }
-
-    header p {
-      font-size: 20px;
-      margin: 5px 0;
+      font-size: 40px;
     }
 
     main {
+      flex: 1;
       padding: 20px;
+    }
+
+    section {
+      background-color: #fff;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       text-align: center;
     }
 
     h2 {
-      border-bottom: 2px solid #e6a8d7;
-      padding-bottom: 5px;
+      color: #0077b6;
       font-size: 24px;
-      color: #d65db1;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #0077b6;
+      padding-bottom: 5px;
     }
 
     .products {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
       justify-content: center;
+      gap: 20px;
     }
 
     .product {
-      width: 200px;
-      padding: 10px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      width: 150px;
       text-align: center;
     }
 
     .product img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 8px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     }
 
     .product p {
-      margin: 0;
-      font-weight: bold;
-      color: #c06c84;
       font-size: 16px;
+      margin-top: 8px;
+      color: #0077b6;
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
 
     .gallery img {
-      width: 100%;
+      width: 200px;
+      height: auto;
       border-radius: 10px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      object-fit: cover;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     }
 
     footer {
       font-size: 14px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      padding: 15px;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      section {
+        padding: 15px;
+        margin: 15px 10px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .product {
+        width: 45%;
+      }
+
+      .gallery img {
+        width: 45%;
+      }
+
+      .product p {
+        font-size: 14px;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+        font-size: 16px;
+      }
+
+      footer {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -147,13 +195,12 @@
         <img src="gallery1.jpg" alt="Gallery Photo 1">
         <img src="gallery2.jpg" alt="Gallery Photo 2">
         <img src="gallery3.jpg" alt="Gallery Photo 3">
-        <img src="gallery4.jpg" alt="Gallery Photo 4">
       </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Rantai Ceria. All rights reserved.
+    &copy; 2025 Gantungan Ceria. All rights reserved.
   </footer>
 
 </body>
