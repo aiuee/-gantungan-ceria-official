@@ -6,26 +6,41 @@
   <title>Gantungan Ceria</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding-bottom: 60px;
-      font-family: 'Quicksand', sans-serif;
-      background-color: #fff0f5;
-      color: #333;
-      font-size: 16px;
+    * {
+      box-sizing: border-box;
     }
 
-    header, footer {
-      background-color: rgba(230, 168, 215, 0.9);
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #afeeee;
+      color: #333;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+
+    header {
+      background-color: #6495ed;
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     nav a {
       text-decoration: none;
       color: white;
-      background-color: #c06c84;
+      background-color: #4169e1;
       padding: 8px 14px;
       border-radius: 20px;
       margin: 0 5px;
@@ -35,47 +50,119 @@
     }
 
     nav a:hover {
-      background-color: #b04e7d;
+      background-color: #3b82f6;
+      color: black;
     }
 
     h1 {
-      font-size: 40px;
       margin: 10px 0;
+      font-size: 40px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      margin: 10px 0 20px 0;
+      color: white;
     }
 
     main {
+      flex: 1;
       padding: 20px;
       text-align: center;
     }
 
-    p {
-      font-size: 18px;
+    .container {
+      background-color: white;
+      width: 98%;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    p, ol {
+      font-size: 24px;
       line-height: 1.6;
-      margin-bottom: 20px;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      text-align: center;
     }
 
     ol {
       text-align: left;
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-      background-color: #ffe6f2;
+      background-color: #f0f8ff;
       padding: 20px;
       border-radius: 10px;
-      border-left: 6px solid #e6a8d7;
-      font-size: 16px;
+      border-left: 6px solid #6495ed;
+      font-size: 20px;
+      padding: 20px;
+      padding-left: 40px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      padding-left: 10px;
     }
 
     footer {
       font-size: 14px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      background-color: #6495ed;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+      body {
+        font-size: 16px;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      p, ol {
+        font-size: 16px;
+        padding: 0 10px;
+      }
+
+      ol {
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 6px solid #6495ed;
+        font-size: 20px;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+        padding-left: 10px;      }
+
+      .container {
+        width: 98%;
+        padding: 10px;
+      }
+
+      footer {
+        font-size: 12px;
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ヘッダー -->
   <header>
     <nav>
       <a href="products.html">🛍 Products</a>
@@ -83,23 +170,24 @@
       <a href="contact.html">📍 Contact</a>
     </nav>
     <h1>Gantungan Ceria</h1>
-    <p>Welcome to our cute keychain shop!</p>
+    <p class="subtitle">Welcome to our cute keychain shop!</p>
   </header>
 
   <main>
-    <p>Gantungan Ceria is a project made for the subject "Kreatifitas, Inovasi, dan Kewirausahaan".</p>
-    <p>Our policies are:</p>
-    <ol>
-      <li>Good things at a good price.</li>
-      <li>Make friends happy with our funny products.</li>
-      <li>Create items that both men and women can enjoy.</li>
-    </ol>
-    <p>✨ Cute keychains are waiting for you! ✨</p>
+    <div class="container">
+      <p>Gantungan Ceria is a project made for the subject "Kreatifitas, Inovasi, dan Kewirausahaan".</p>
+      <p>Our policies are:</p>
+      <ol>
+        <li>Good things at a good price.</li>
+        <li>Make friends happy with our funny products.</li>
+        <li>Create items that both men and women can enjoy.</li>
+      </ol>
+      <p>✨ Cute keychains are waiting for you! ✨</p>
+    </div>
   </main>
 
-  <!-- フッター -->
   <footer>
-    &copy; 2025 Rantai Ceria. All rights reserved.
+    &copy; 2025 Gantungan Ceria. All rights reserved.
   </footer>
 
 </body>
