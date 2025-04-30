@@ -2,28 +2,40 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us - Rantai Ceria</title>
+  <title>Contact Us - Gantungan Ceria</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: 'Quicksand', sans-serif;
-      background-color: #fff0f5;
+      background-color: #e6f0ff;
       color: #333;
-      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-size: 18px;
     }
 
     header, footer {
-      background-color: rgba(230, 168, 215, 0.9);
+      background-color: #3399cc;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
 
     nav a {
       text-decoration: none;
       color: white;
-      background-color: #c06c84;
+      background-color: #0077b6;
       padding: 8px 14px;
       border-radius: 20px;
       margin: 0 5px;
@@ -33,71 +45,78 @@
     }
 
     nav a:hover {
-      background-color: #b04e7d;
+      background-color: #005f87;
     }
 
     h1 {
       margin: 10px 0;
-      font-size: 48px;
-    }
-
-    header p {
-      font-size: 20px;
-      margin: 5px 0;
+      font-size: 40px;
     }
 
     main {
+      flex: 1;
       padding: 20px;
+    }
+
+    .contact-section {
+      background-color: #fff;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       text-align: center;
     }
 
-    h2 {
-      color: #d65db1;
-      border-bottom: 2px solid #f3c6e5;
-      padding-bottom: 5px;
+    .contact-section h2 {
+      color: #0077b6;
       font-size: 24px;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #0077b6;
+      padding-bottom: 5px;
     }
 
-    p, a {
+    .contact-section p, .contact-section a {
       font-size: 20px;
-    }
-
-    .map {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .map a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #f48fb1;
-      color: white;
-      border-radius: 25px;
+      color: #0077b6;
       text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+      word-wrap: break-word;
     }
 
-    .map a:hover {
-      background-color: #ec407a;
+    .contact-section a:hover {
+      text-decoration: underline;
     }
 
     iframe {
-      width: 90%;
-      max-width: 600px;
-      height: 400px;
+      width: 100%;
+      height: 300px;
       border: none;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      margin-top: 15px;
     }
 
     footer {
       font-size: 14px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      padding: 15px;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .contact-section {
+        padding: 15px;
+        margin: 15px 10px;
+      }
+
+      .contact-section h2 {
+        font-size: 20px;
+      }
+
+      .contact-section p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -114,24 +133,28 @@
   </header>
 
   <main>
-    <h2>📧 Email</h2>
-    <p>gantunganceriaofficial@gmail.com</p>
+    <div class="contact-section">
+      <h2>📧 Email</h2>
+      <p>gantunganceriaofficial@gmail.com</p>
+    </div>
 
-    <h2>📸 Instagram</h2>
-    <p>
-      <a href="https://www.instagram.com/gk_memeofficial?igsh=MTRqOGdzNDZ1bW5rdw==" target="_blank">
-        @gk_memeofficial
-      </a>
-    </p>
+    <div class="contact-section">
+      <h2>📸 Instagram</h2>
+      <p>
+        <a href="https://www.instagram.com/gk_memeofficial?igsh=MTRqOGdzNDZ1bW5rdw==" target="_blank">
+          @gk_memeofficial
+        </a>
+      </p>
+    </div>
 
-    <div class="map">
+    <div class="contact-section">
       <h2>📍 Location</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.1506886266666!2d110.38331459999999!3d-7.7738413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59b5ec2ca1d5%3A0x666181ae53de7759!2sGedung%20Kuliah%20I%20(GK%201)%20FBSB%20UNY!5e0!3m2!1sja!2sid!4v1745950283486!5m2!1sja!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 Rantai Ceria. All rights reserved.
+    &copy; 2025 Gantungan Ceria. All rights reserved.
   </footer>
 
 </body>
