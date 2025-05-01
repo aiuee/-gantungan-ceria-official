@@ -5,6 +5,27 @@
   <title>Gantungan Ceria - Products and Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    .hero-header {
+      background: url('Gantungan Ceria_Header_高画質.png') no-repeat;
+      background-position: 20% bottom; /* ← 左をカット：中央を右寄りにずらす */
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      margin: 0;
+    }
+
+
+
+    .header-overlay {
+      background-color: rgba(0, 0, 0, 0.4); /* 文字を読みやすくするためのオーバーレイ */
+      padding: 20px;
+      border-radius: 20px;
+      display: inline-block;
+      backdrop-filter: blur(2px);
+    }
+    
     * {
       box-sizing: border-box;
     }
@@ -173,7 +194,8 @@
 </head>
 <body>
 
-  <header>
+  <header class="hero-header">
+  <div class="header-overlay">
     <nav>
       <a href="index.html">🏠 Home</a>
       <a href="about.html">👩‍💼 About Us</a>
@@ -181,6 +203,7 @@
     </nav>
     <h1>Products & Gallery</h1>
     <p class="subtitle">Check out our lovely items!</p>
+  </div>
   </header>
 
   <main>
