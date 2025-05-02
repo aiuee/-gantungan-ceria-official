@@ -5,6 +5,38 @@
   <title>Gantungan Ceria - Products and Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* モーダル関連 */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .zoom-on-hover {
+      transition: transform 0.3s ease;
+      cursor: zoom-in;
+    }
+
+    .zoom-on-hover:hover {
+      transform: scale(1.2);
+      z-index: 2;
+    }
+
     .hero-header {
       background: url('Gantungan Ceria_Header_高画質.png') no-repeat;
       background-position: 20% bottom; /* ← 左をカット：中央を右寄りにずらす */
@@ -15,8 +47,6 @@
       position: relative;
       margin: 0;
     }
-
-
 
     .header-overlay {
       background-color: rgba(0, 0, 0, 0.4); /* 文字を読みやすくするためのオーバーレイ */
@@ -195,15 +225,15 @@
 <body>
 
   <header class="hero-header">
-  <div class="header-overlay">
-    <nav>
-      <a href="index.html">🏠 Home</a>
-      <a href="about.html">👩‍💼 About Us</a>
-      <a href="contact.html">📍 Contact</a>
-    </nav>
-    <h1>Products & Gallery</h1>
-    <p class="subtitle">Check out our lovely items!</p>
-  </div>
+    <div class="header-overlay">
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👩‍💼 About Us</a>
+        <a href="contact.html">📍 Contact</a>
+      </nav>
+      <h1>Products & Gallery</h1>
+      <p class="subtitle">Check out our lovely items!</p>
+    </div>
   </header>
 
   <main>
@@ -211,15 +241,15 @@
       <h2>Our Products</h2>
       <div class="products">
         <div class="product">
-          <img src="Coming_Soon.jpeg" alt="Coming_Soon" style="width: 100%; max-width: 400px; border-radius: 10px;">
+          <img src="Coming_Soon.jpeg" alt="Coming Soon" class="zoom-on-hover" onclick="openModal(this.src)">
           <p>Meme *** 1 - Rp. ?,???</p>
         </div>
         <div class="product">
-          <img src="Coming_Soon.jpeg" alt="Coming_Soon" style="width: 100%; max-width: 400px; border-radius: 10px;">
+          <img src="Coming_Soon.jpeg" alt="Coming Soon" class="zoom-on-hover" onclick="openModal(this.src)">
           <p>Meme *** 2 - Rp. ?,???</p>
         </div>
         <div class="product">
-          <img src="Coming_Soon.jpeg" alt="Coming_Soon" style="width: 100%; max-width: 400px; border-radius: 10px;">
+          <img src="Coming_Soon.jpeg" alt="Coming Soon" class="zoom-on-hover" onclick="openModal(this.src)">
           <p>Meme *** 3 - Rp. ?,???</p>
         </div>
       </div>
@@ -228,16 +258,33 @@
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="gallery">
-        <img src="Coming_Soon.jpeg" alt="Coming_Soon" style="width: 100%; max-width: 400px; border-radius: 10px;">
-        <img src="Coming_Soon.jpeg" alt="Coming_Soon" style="width: 100%; max-width: 400px; border-radius: 10px;">
-        <img src="Coming_Soon.jpeg" alt="Coming_Soon" style="width: 100%; max-width: 400px; border-radius: 10px;">
+        <img src="Coming_Soon.jpeg" alt="Coming Soon" class="zoom-on-hover" onclick="openModal(this.src)">
+        <img src="Coming_Soon.jpeg" alt="Coming Soon" class="zoom-on-hover" onclick="openModal(this.src)">
+        <img src="Coming_Soon.jpeg" alt="Coming Soon" class="zoom-on-hover" onclick="openModal(this.src)">
       </div>
     </section>
   </main>
 
+  <!-- モーダル領域 -->
+  <div id="imgModal" class="modal" onclick="closeModal()">
+    <img id="modalImg" class="modal-content" alt="Enlarged Image">
+  </div>
+
   <footer>
     &copy; 2025 Gantungan Ceria. All rights reserved.
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function openModal(imgSrc) {
+      document.getElementById('modalImg').src = imgSrc;
+      document.getElementById('imgModal').style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById('imgModal').style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
